@@ -6,7 +6,4 @@
         msg: this task is running on ec2-user
       when: ansible_distribution == "Amazon"
 
-    - name: this is ansible file 
-      debug:
-        msg: this task is running on ec2-user
-      when: ansible_hostname == "ip-172-31-19-205"
+    
