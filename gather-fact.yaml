@@ -1,5 +1,6 @@
 - name: gathering facts
   hosts: all
+  become: yes
   tasks: 
     - name: Ansible hosts info 
       debug: 
