@@ -1,8 +1,7 @@
 - name: package installation using playbook
   hosts: all
   tasks:
-    - name: install ntpdate
+    - name: ntpdate install
       ansible.builtin.package:
         name: ntpdate
         state: present
-        
