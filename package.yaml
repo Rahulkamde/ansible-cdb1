@@ -6,8 +6,3 @@
       ansible.builtin.package:
         name: tree
         state: present
-
-    - name: Install one specific version of Apache
-      ansible.builtin.package:
-        name: httpd-2.2.29-1.4.amzn1
-        state: present    
