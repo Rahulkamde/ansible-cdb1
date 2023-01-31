@@ -1,7 +1,17 @@
-- name: condition in ansible file
+- name: condition in ansible 
   hosts: all
   tasks: 
-    - name: This is a condition in ansible file
+    - name: This task is condition ansible
       debug:
         msg: this task is running on ec2-user
       when: ansible_distribution == "Amazon"
+
+    - name: run task on centos
+      debug: 
+        msg: This task is running on centos
+      when: ansible_distribution == "Ubuntu"
+
+    - name: run task on centos
+      debug: 
+        msg: This task is running on centos
+      when: ansible_distribution == "Debian"    
