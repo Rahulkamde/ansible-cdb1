@@ -1,5 +1,6 @@
 - name: package installation using playbook
   hosts: all
+  become: yes
   tasks:
     - name: httpd install
       ansible.builtin.package:
