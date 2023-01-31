@@ -1,7 +1,7 @@
 - name: package installation using playbook
   hosts: all
   tasks:
-    - name: ntpdate install
-      ansible.builtin.package:
-        name: ntpdate
-        state: present
+    - name: Install the latest version of Apache
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
