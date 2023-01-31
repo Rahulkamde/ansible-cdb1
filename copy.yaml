@@ -1,8 +1,8 @@
 - name: copy file from master server to nodes server
   hosts: all
-  becomes: yes
+  become: yes
   tasks: 
     - name: copy file from master server to nodes server
       copy: 
-      src: /home/ansadmin/rahul.txt
+      src: /home/ec2-user/rahul.txt
       dest: /opt/rahul.conf
