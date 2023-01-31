@@ -5,5 +5,3 @@
       debug:
         msg: this task is running on ec2-user
       when: ansible_distribution == "Amazon"
-
-    
