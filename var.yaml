@@ -2,7 +2,8 @@
   hosts: all 
   vars: 
     url: www.global-var.com
-  
+  vars_files:
+    - filevars.yaml
   tasks: 
     - name: task1 print 
       debug: 
@@ -13,4 +14,4 @@
     - name: task2 print
       debug:
         msg: "{{url}}"
-        
+
