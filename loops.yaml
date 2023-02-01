@@ -1,0 +1,17 @@
+-  name: Package Installation on loop
+   hosts: all
+   tasks: 
+      - name: install using loops
+        debug:
+          msg: pacakge listing "{{item}}"
+        loop:
+          - wardha
+          - nagpur
+          - gondia
+          - usa pipri
+          - seloo
+          - chandpur
+          - shegoan
+          - koradi
+          - ramtek
+          - jamsavali
