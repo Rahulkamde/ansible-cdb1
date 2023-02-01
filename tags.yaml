@@ -1,9 +1,12 @@
 - name: Running playbook on tags basic
   hosts: all
   tasks:
-    - name: Running playbook on tags
+    - name: Running playbook on tags basic
       debug:
         msg: this task is running on Webserver tags
       tags: Webserver
 
-        
+    - name: Running playbook on tags basic  
+      debug:
+        msg: this task is running on Aapserver tags
+      tags: Aapserver    
