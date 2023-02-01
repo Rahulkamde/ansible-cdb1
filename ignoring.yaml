@@ -7,4 +7,4 @@
 
     - name: run the process
       debug:
-        msg: ignoring the process  
+        msg: ignoring the process errors files and running 
