@@ -9,3 +9,10 @@
         msg: "{{url}}"
       vars: 
         url: www.local-var.com
+
+  tasks: 
+    - name: variable print in vars
+      debug: 
+        msg: "{{url}}"
+      vars_files:
+        - filevars.yaml
