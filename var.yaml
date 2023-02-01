@@ -18,5 +18,11 @@
     - name: task3 print
       debug:
         msg: "{{url1}}"
-            
 
+    - name: task4 print
+      debug:
+        msg: "{{url2}}"
+
+    - name: task5 print
+      debug:
+        msg: "{{url3}}"    
