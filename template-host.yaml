@@ -20,7 +20,7 @@
     - name: unzip template
       ansible.builtin.unarchive:
         src: /home/ec2-user/cycle.zip
-        dest: var/www/html/
+        dest: /var/www/html/
         remote_src: true
 
     - name: restart httpd services
