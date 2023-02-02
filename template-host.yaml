@@ -14,12 +14,12 @@
     - name: download template
       ansible.builtin.get_url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page287/cycle.zip     
-        dest: /home/ec2-user/
+        dest: /var/www/html/
         remote_src: true
 
     - name: unzip template
       ansible.builtin.unarchive:
-        src: /home/ec2-user/cycle.zip
+        src: /var/www/html/cycle.zip
         dest: var/www/html/
         remote_src: true
 
