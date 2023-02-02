@@ -1,0 +1,27 @@
+- name: template hosting in playbook 
+  hosts: all
+  become: yes
+  tasks: 
+    - name: package install
+      ansible.bultin.package:
+        state: present
+        name: "{{item}}"
+      loop:
+        - httpd
+        - wget
+        - unzip
+
+    - name: download template
+      ansible.bultin.get_url:
+        url: https://www.free-css.com/assets/files/free-css-templates/download/page287/cycle.zip     
+        dest: /var/www/html/
+        remote_src: true
+
+    - name: unzip template
+      ansible.bultin.unarchive:
+        src: /var/www/html/cycle.zip
+        dest: var/www/html/
+        remote_src: true
+
+    - name: restart httpd services
+      shell: systemctl restart httpd
