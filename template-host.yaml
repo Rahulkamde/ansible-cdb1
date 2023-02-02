@@ -4,8 +4,8 @@
   tasks: 
     - name: package installation
       ansible.builtin.package:
-        state: present
         name: "{{item}}"
+        state: present
       loop:
         - httpd
         - wget
